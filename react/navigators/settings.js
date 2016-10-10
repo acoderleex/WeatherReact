@@ -2,12 +2,21 @@
 
 import React,{ Component } from 'react';
 import {
+  StyleSheet,
   NavigatorIOS,
   View
 }from 'react-native';
-import styles from '../styles/common';
+
+import assign from 'object-assign';
+import CommonStyle from '../styles/common';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Settings from '../components/settings';
+
+const styles = StyleSheet.create(assign(
+  {},
+  CommonStyle
+));
+
 type Props = {
   route: any,
   navigator: any;
@@ -28,7 +37,7 @@ class SettingsNavigator extends Component {
     };
   }
   componentWillMount(){
-    Icon.getImageSource('ios-close',40,'#007aff').then(
+    Icon.getImageSource('ios-close',40,'#ffffff').then(
       (source)=>this.setState({backIcon: source})
     );
   }
@@ -40,6 +49,7 @@ class SettingsNavigator extends Component {
       <NavigatorIOS
         ref="navigator"
         itemWrapperStyle={styles.container}
+        styles={styles.container}
         initialRoute={{
           ...this.props.route,
           leftButtonTitle: '',

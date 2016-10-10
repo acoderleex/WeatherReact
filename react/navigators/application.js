@@ -1,15 +1,24 @@
 'use strict';
 import React, { Component } from 'react';
 import {
+  StyleSheet,
   Navigator
 } from 'react-native';
-import styles from '../styles/common';
+
+import assign from 'object-assign';
+
+import CommonStyle from '../styles/common';
 
 import Locations from '../components/locations';
 import Settings from '../components/settings';
 import Weather  from '../components/weather';
 
 import SettingsNavigator from '../navigators/settings';
+
+const styles = StyleSheet.create(assign(
+  {},
+  CommonStyle
+));
 
 type Props = {};
 

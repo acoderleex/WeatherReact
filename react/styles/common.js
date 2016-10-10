@@ -1,8 +1,7 @@
 'use strict';
-const common ={
+const common = {
     container:{
       flex: 1
     }
 };
-
 export default common;
