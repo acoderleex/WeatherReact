@@ -19,9 +19,9 @@ class LocationService {
     let context= realm.current();
     try {
         let locations = context.objects('Location');
-        context.write(() => {
-          context.delete(locations);
-        });
+        // context.write(() => {
+        //   context.delete(locations);
+        // });
       console.log("--s-ss-s-s-s-s-s-------"+locations.length);
         if (locations.length>0) {
           return;

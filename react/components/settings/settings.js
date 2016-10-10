@@ -29,27 +29,27 @@ class Settings extends Component {
 
   constructor(props: Props) {
     super(props);
-
     (this: any).close = this.close.bind(this);
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar barStyle='default' backgroundColor='#000' />
+          <StatusBar barStyle='default' backgroundColor='#000' />
 
-        <View style={styles.sectionTitle}>
-          <Text style={styles.sectionTitleText}>HELP</Text>
-        </View>
+          <View style={styles.sectionTitle}>
+            <Text style={styles.sectionTitleText}>HELP</Text>
+          </View>
 
-        {/*<View style={styles.section}>
+        <View style={styles.section}>
           <TouchableHighlight
             style={styles.navigationButtonRow}
             underlayColor='#C8C7CC'
-            onPress={() => this.navigateTo({
-              title: 'User Guide',
-              component: UserGuide
-            })}>
+            //onPress={() => this.navigateTo({
+            //  title: 'User Guide',
+            //  component: UserGuide
+            //})}
+            >
             <View style={styles.navigationButtonView}>
               <Text style={styles.navigationButtonText}>User Guide</Text>
               <Icon name='ios-arrow-forward' size={20} color='#C7C7CC' />
@@ -61,16 +61,17 @@ class Settings extends Component {
           <TouchableHighlight
             style={styles.navigationButtonRow}
             underlayColor='#C8C7CC'
-            onPress={() => this.navigateTo({
-              title: 'About',
-              component: AboutSettings,
-            })}>
+            //onPress={() => this.navigateTo({
+            //  title: 'About',
+            //  component: AboutSettings,
+            //})}
+            >
             <View style={styles.navigationButtonView}>
               <Text style={styles.navigationButtonText}>About</Text>
               <Icon name='ios-arrow-forward' size={20} color='#C7C7CC' />
             </View>
           </TouchableHighlight>
-        </View>*/}
+        </View>
 
       </View>
     );

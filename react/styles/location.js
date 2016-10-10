@@ -2,6 +2,7 @@
 const LocationStyle =  {
   container: {
     flex: 1,
+    marginTop: 64,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center'
@@ -17,6 +18,12 @@ const LocationStyle =  {
   },
   buttonText: {
     color: '#fff'
+  },
+  navigationButtonRow: {
+    height: 44,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    backgroundColor: '#fff'
   }
 };
 module.exports = LocationStyle ;

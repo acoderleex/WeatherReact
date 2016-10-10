@@ -10,7 +10,6 @@ import {
 import assign from 'object-assign';
 import CommonStyle from '../styles/common';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Settings from '../components/settings/settings';
 
 const styles = StyleSheet.create(assign(
   {},
@@ -18,7 +17,7 @@ const styles = StyleSheet.create(assign(
 ));
 
 type Props = {
-  route: any,
+  route: any;
   navigator: any;
 };
 
@@ -37,30 +36,33 @@ class SettingsNavigator extends Component {
     };
   }
   componentWillMount(){
-    Icon.getImageSource('ios-close',40,'#ffffff').then(
+    Icon.getImageSource('ios-close',40,'#007AFF').then(
       (source)=>this.setState({backIcon: source})
     );
   }
   render(){
-    if (!this.state.backIcon) {
-      return null;
+    try {
+      if (!this.state.backIcon) {
+        return null;
+      }
+      return(
+        <NavigatorIOS
+          ref="navigator"
+          itemWrapperStyle={styles.content}
+          style={styles.container}
+          initialRoute={{
+            ...this.props.route,
+            leftButtonTitle: '',
+            leftButtonIcon: this.state.backIcon,
+            onLeftButtonPress: this.props.navigator.pop,
+            passProps:{
+              navigator: this
+            }
+          }}/>
+      );
+    } catch (e) {
+      global.log(e);
     }
-    return(
-      <NavigatorIOS
-        ref="navigator"
-        itemWrapperStyle={styles.container}
-        styles={styles.container}
-        initialRoute={{
-          ...this.props.route,
-          leftButtonTitle: '',
-          leftButtonIcon: this.state.backIcon,
-          onLeftButtonPress: this.props.navigator.pop,
-          passProps:{
-            navigator: this
-          }
-        }}
-        />
-    );
   }
 
   push(route: any) {
@@ -68,8 +70,8 @@ class SettingsNavigator extends Component {
   }
 
   close() {
+    console.log("======close====closecloseclose===");
     this.props.navigator.pop();
   }
 }
-
 export default SettingsNavigator;
