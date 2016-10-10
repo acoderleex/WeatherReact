@@ -1,8 +1,9 @@
 'use strict';
 const WeatherStyle = {
   container: {
+    marginTop: -230,
     flex: 1,
-    backgroundColor: '#F9F9F9'
+    backgroundColor: '#00000000'
   },
   loadingView: {
     backgroundColor: '#fff',
