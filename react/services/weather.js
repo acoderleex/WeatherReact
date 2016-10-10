@@ -20,6 +20,7 @@ class  WeatherService {
           result=await this.getWeatherFromApiAsync(location.openWeatherId);
           this.updateWeatherInContext(location,result,context);
         }
+        data.push(result);
       }
     } finally {
       context.close();
@@ -149,6 +150,7 @@ class  WeatherService {
     for (var i = 0; i < locationIds.length; i++) {
       var locationId= locationIds[i];
       var result= await this.getWeatherFromApiAsync(locationId);
+
       data.push(result);
     }
     return data;
