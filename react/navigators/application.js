@@ -9,8 +9,8 @@ import assign from 'object-assign';
 
 import CommonStyle from '../styles/common';
 
-import Locations from '../components/locations';
-import Settings from '../components/settings';
+import Locations from '../components/settings/locations';
+import Settings from '../components/settings/settings';
 import Weather  from '../components/weather';
 
 import SettingsNavigator from '../navigators/settings';

@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 
 import assign from 'object-assign';
-import SettingsStyle from '../styles/settings';
+import SettingsStyle from '../../styles/settings';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 // import AboutSettings from './about';

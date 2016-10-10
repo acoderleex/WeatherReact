@@ -11,14 +11,13 @@ import {
   View,
   Animated,
   Image,
-  Text,
-  Dimensions
+  Text
 } from 'react-native';
 
 import { connect } from 'react-redux';
 import assign from 'object-assign';
-import WeatherStyle from '../styles/weather';
 
+import WeatherStyle from '../styles/weather';
 import Swiper from '../dependencies/swiper';
 
 import Header from './header';
@@ -26,8 +25,6 @@ import Footer from './footer';
 import Forecast from './forecast';
 
 import type { WeatherModel } from '../models/view';
-
-const SCREEN_WIDTH = Dimensions.get('window').width;
 
 type Props = {
   dispatch: any;

@@ -11,12 +11,14 @@ import {
   View,
   Image,
   Animated,
-  Dimensions,
-  RefreshControl
+  RefreshControl,
+  Dimensions
 } from 'react-native';
 
 import { connect } from 'react-redux';
 import assign from 'object-assign';
+const SCREEN_WIDTH = Dimensions.get('window').width;
+
 import HeaderStyle from '../styles/header';
 
 import ParallaxScrollView from '../dependencies/parallaxview';
@@ -27,8 +29,6 @@ const renderForecastImage = require('./forecastimage');
 
 import dateFormat from 'dateformat';
 const today = dateFormat(new Date(), 'ddd d mmmm');
-
-const SCREEN_WIDTH = Dimensions.get('window').width;
 
 const styles = StyleSheet.create(assign({},HeaderStyle));
 

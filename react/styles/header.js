@@ -1,4 +1,11 @@
 'use strict';
+
+import {
+    Dimensions
+} from 'react-native';
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
+
 const HeaderStyle= {
   headerViewAnimated: {
     width: SCREEN_WIDTH,

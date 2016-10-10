@@ -19,7 +19,6 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import FooterStyle from '../styles/footer';
 import Pager from './pager';
-import Settings from './settings';
 
 type Props = {
   current: number;

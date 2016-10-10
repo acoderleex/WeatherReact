@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 
 import assign from 'object-assign';
-import LocationStyle from '../styles/location';
+import LocationStyle from '../../styles/location';
 
 type Props = {
   navigator: any;

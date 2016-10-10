@@ -10,7 +10,7 @@ import {
 import assign from 'object-assign';
 import CommonStyle from '../styles/common';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Settings from '../components/settings';
+import Settings from '../components/settings/settings';
 
 const styles = StyleSheet.create(assign(
   {},
