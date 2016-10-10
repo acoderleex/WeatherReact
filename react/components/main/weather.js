@@ -17,14 +17,14 @@ import {
 import { connect } from 'react-redux';
 import assign from 'object-assign';
 
-import WeatherStyle from '../styles/weather';
-import Swiper from '../dependencies/swiper';
+import WeatherStyle from '../../styles/weather';
+import Swiper from '../../dependencies/swiper';
 
 import Header from './header';
 import Footer from './footer';
 import Forecast from './forecast';
 
-import type { WeatherModel } from '../models/view';
+import type { WeatherModel } from '../../models/view';
 
 type Props = {
   dispatch: any;
@@ -62,7 +62,7 @@ class Weather extends Component {
         <View style={styles.loadingView}>
           <View style={styles.loadingHeader}>
             <Text style={styles.loadingText}>Loading...</Text>
-            <Image source={require('../images/img/sunny.gif')} />
+            <Image source={require('../../images/img/sunny.gif')} />
           </View>
         </View>
       );

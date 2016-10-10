@@ -12,39 +12,39 @@ function renderForecastImage(icon: string, width: number, height: number) {
   switch (icon) {
     case '01d':
     case '01n':
-      image = require('../images/img/sunny.png');
+      image = require('../../images/img/sunny.png');
       break;
     case '02d':
     case '02n':
-      image = require('../images/img/sunny_s_cloudy.png');
+      image = require('../../images/img/sunny_s_cloudy.png');
       break;
     case '03d':
     case '03n':
-      image = require('../images/img/partly_cloudy.png');
+      image = require('../../images/img/partly_cloudy.png');
       break;
     case '04d':
     case '04n':
-      image = require('../images/img/cloudy.png');
+      image = require('../../images/img/cloudy.png');
       break;
     case '09d':
     case '09n':
-      image = require('../images/img/rain.png');
+      image = require('../../images/img/rain.png');
       break;
     case '10d':
     case '10n':
-      image = require('../images/img/rain_s_cloudy.png');
+      image = require('../../images/img/rain_s_cloudy.png');
       break;
     case '11d':
     case '11n':
-      image = require('../images/img/thunderstorms.png');
+      image = require('../../images/img/thunderstorms.png');
       break;
     case '13d':
     case '13n':
-      image = require('../images/img/snow.png');
+      image = require('../../images/img/snow.png');
       break;
     case '50d':
     case '50n':
-      image = require('../images/img/fog.png');
+      image = require('../../images/img/fog.png');
       break;
   }
 

@@ -11,7 +11,7 @@ import CommonStyle from '../styles/common';
 
 import Locations from '../components/settings/locations';
 import Settings from '../components/settings/settings';
-import Weather  from '../components/weather';
+import Weather  from '../components/main/weather';
 
 import SettingsNavigator from '../navigators/settings';
 

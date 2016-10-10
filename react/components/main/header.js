@@ -19,11 +19,11 @@ import { connect } from 'react-redux';
 import assign from 'object-assign';
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
-import HeaderStyle from '../styles/header';
+import HeaderStyle from '../../styles/header';
 
-import ParallaxScrollView from '../dependencies/parallaxview';
-import { getAllWeather, setWeatherRefreshing } from '../actions';
-import type { WeatherObservation, WeatherModel } from '../models/view';
+import ParallaxScrollView from '../../dependencies/parallaxview';
+import { getAllWeather, setWeatherRefreshing } from '../../actions';
+import type { WeatherObservation, WeatherModel } from '../../models/view';
 
 const renderForecastImage = require('./forecastimage');
 
@@ -114,7 +114,7 @@ class Header extends Component {
 
   renderBackground() {
     return (
-      <Image source={require('../images/img/header-background.png')}/>
+      <Image source={require('../../images/img/header-background.png')}/>
     );
   }
 

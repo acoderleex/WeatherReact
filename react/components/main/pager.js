@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import assign from 'object-assign';
-import PagerStyle from '../styles/pager';
+import PagerStyle from '../../styles/pager';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 

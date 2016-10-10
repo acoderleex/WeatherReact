@@ -14,8 +14,8 @@ import {
 
 import assign from 'object-assign';
 
-import type { WeatherForecast } from '../models/view';
-import ForecastStyle from '../styles/forecast';
+import type { WeatherForecast } from '../../models/view';
+import ForecastStyle from '../../styles/forecast';
 const renderForecastImage = require('./forecastimage');
 
 type Props = {
