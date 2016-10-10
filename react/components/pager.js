@@ -10,6 +10,9 @@ import {
   View
 } from 'react-native';
 
+import assign from 'object-assign';
+import PagerStyle from '../styles/pager';
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 type Props = {
@@ -37,14 +40,9 @@ class Pager extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  pager: {
-    flexDirection: 'row'
-  },
-  dot: {
-    marginLeft: 3,
-    marginRight: 3
-  }
-});
+const styles = StyleSheet.create(assign(
+  {},
+  PagerStyle
+));
 
 module.exports = Pager;

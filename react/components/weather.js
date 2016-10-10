@@ -16,6 +16,9 @@ import {
 } from 'react-native';
 
 import { connect } from 'react-redux';
+import assign from 'object-assign';
+import WeatherStyle from '../styles/weather';
+
 import Swiper from '../dependencies/swiper';
 
 import Header from './header';
@@ -112,26 +115,10 @@ class Weather extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F9F9F9'
-  },
-  loadingView: {
-    backgroundColor: '#fff',
-    flex: 1
-  },
-  loadingHeader: {
-    height: 290,
-    backgroundColor: '#589BC7',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  loadingText: {
-    color: '#fff',
-    marginBottom: 18
-  }
-});
+const styles = StyleSheet.create(assign(
+  {},
+  WeatherStyle
+));
 
 function select(store: any, props: Props) {
   return {

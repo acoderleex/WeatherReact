@@ -13,6 +13,9 @@ import {
   TouchableHighlight
 } from 'react-native';
 
+import assign from 'object-assign';
+import LocationStyle from '../styles/location';
+
 type Props = {
   navigator: any;
 };
@@ -39,25 +42,9 @@ class Locations extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  button: {
-    width: 200,
-    height: 35,
-    backgroundColor: '#007AFF',
-    borderRadius: 2,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  buttonText: {
-    color: '#fff'
-  }
-});
+const styles = StyleSheet.create(assign(
+  {},
+  LocationStyle
+));
 
 module.exports = Locations;

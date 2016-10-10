@@ -12,8 +12,10 @@ import {
   Image,
 } from 'react-native';
 
-import type { WeatherForecast } from '../models/view';
+import assign from 'object-assign';
 
+import type { WeatherForecast } from '../models/view';
+import ForecastStyle from '../styles/forecast';
 const renderForecastImage = require('./forecastimage');
 
 type Props = {
@@ -71,40 +73,9 @@ class Forecast extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  forecastView: {
-    marginLeft: 5,
-    marginRight: 5,
-    flexDirection: 'row',
-    borderColor: '#e2e2e2',
-    backgroundColor: '#fff',
-    borderWidth: 1,
-    borderRadius: 3
-  },
-  forecastList: {
-    flex: 1,
-    borderColor: '#E2E2E2',
-    paddingLeft: 12,
-    paddingRight: 12
-  },
-  forecastItem: {
-    paddingTop: 10,
-    paddingBottom: 8,
-    flexDirection: 'row'
-  },
-  forecastItemDayView: {
-    flex: 1
-  },
-  forecastItemDataView: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'flex-end'
-  },
-  forecastItemTemp: {
-    textAlign: 'right',
-    marginLeft: 14,
-    width: 18
-  }
-});
+const styles = StyleSheet.create(assign(
+  {},
+  ForecastStyle
+));
 
 module.exports = Forecast;
